@@ -1,5 +1,4 @@
 var EventEmitter = require('events').EventEmitter
-var assert = require('assert')
 
 module.exports = PgIPC
 

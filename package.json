@@ -1,0 +1,35 @@
+{
+  "name": "pg-ipc",
+  "version": "1.0.0",
+  "description": "IPC over PostgreSQL LISTEN/NOTIFY/UNLISTEN exposed as an EventEmitter",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "after-all": "^2.0.2",
+    "pg": "^6.1.2",
+    "speedometer": "^1.0.0",
+    "statistics": "^3.3.0",
+    "tape": "^4.6.2"
+  },
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilbayes/pg-ipc.git"
+  },
+  "keywords": [
+    "ipc",
+    "pg",
+    "postgres",
+    "eventemitter",
+    "notify",
+    "async"
+  ],
+  "author": "Emil Bay <github@tixz.dk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilbayes/pg-ipc/issues"
+  },
+  "homepage": "https://github.com/emilbayes/pg-ipc#readme"
+}

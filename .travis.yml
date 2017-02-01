@@ -1,0 +1,17 @@
+notifications:
+  email: false
+language: node_js
+node_js:
+- node
+services:
+  - postgresql
+
+before_script:
+  - psql -c 'create database pg-ipc;' -U postgres
+
+deploy:
+  provider: npm
+  email: github@tixz.dk
+  api_key: travis encrypt "NPM_TOKEN" --add deploy.api_key
+  on:
+    tags: true

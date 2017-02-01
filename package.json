@@ -1,6 +1,6 @@
 {
   "name": "pg-ipc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "IPC over PostgreSQL LISTEN/NOTIFY/UNLISTEN exposed as an EventEmitter",
   "main": "index.js",
   "dependencies": {},

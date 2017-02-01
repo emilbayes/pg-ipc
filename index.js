@@ -34,9 +34,9 @@ function PgIPC (client) {
     var encodedPayload
     if (payload != null) encodedPayload = typeof payload !== 'string' ? JSON.stringify(payload) : payload
 
-    var statement = `NOTIFY ${client.escapeIdentifier(channel)}` + (encodedPayload != null ? `, ${client.escapeLiteral(encodedPayload)}` : ''
+    var statement = `NOTIFY ${client.escapeIdentifier(channel)}` + (encodedPayload != null ? `, ${client.escapeLiteral(encodedPayload)}` : '')
 
-    client.query(statement), function (err) {
+    client.query(statement, function (err) {
       if (err) return that.emit('error', err)
       that.emit('notify', channel, payload)
     })

@@ -4,14 +4,13 @@ language: node_js
 node_js:
 - node
 services:
-  - postgresql
-
+- postgresql
 before_script:
-  - psql -c 'create database pg-ipc;' -U postgres
-
+- psql -c 'create database pg-ipc;' -U postgres
 deploy:
   provider: npm
   email: github@tixz.dk
-  api_key: travis encrypt "NPM_TOKEN" --add deploy.api_key
+  api_key:
+    secure: fszIQ0a/xhgN1TkIJm0terNd3xM1d2TVbz8uTFlvZsOsq0kvNqykgSu3+ZmwchxpvJTqcsW7+rcTNN2aBTnAHVNugI9zM5wWKIbYBIO31F+pmXPeoLuIXS2BP71Ul4q32rTlQtlwIcgnF0WsKf5j4tAHD42V5x7K0yzFQXVOjcblI8BlHr9m3a6ubWWHFarE2TCxXIahb4vc4ZKq3R5cNj9qymK/Fn7A1alllLRfchsnQdx7nPFBeaavmURpw+F6rBTd6W6L1W1cmyjsrrTEDDIvXiRW0gYUS5/emBYh2EtMHJ3NPu1qYkVPZqFXrk23goUoete/NmN4iq+BTqr/4Vigt1wfU9MEumsi0/ZGsVKuLLDOqdS5iWLplJdvFqbZlaxr/mLG8l7dch3XUrJVhysVlT5d/3PsYq1Kx1/flyh2JtMComDEQfr1mKQYzAC+ASsQ1HUixK2TBk4NvJPIOiRUex4Ik/0OgqTSr0cBXzOSesQH5RCD6RC8LwtBm2x3dwC3gjySJSlWiPf6PBo3vA4URGdetPwMfeXq/hJfWpE55SLhP/DzdwMeiw3Mz9Glm9QGkOAOmpp6Tcl8SOWQLMTC8qGWrPK1ogFaTXRSJZU6Wbru9XIoCBDvJQ52Z47mZwmzFb5oYR4vorbjXSO8XIMT3VKCPblqM4InaLrN1cU=
   on:
     tags: true

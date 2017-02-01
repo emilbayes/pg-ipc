@@ -6,7 +6,7 @@ node_js:
 services:
 - postgresql
 before_script:
-- psql -c 'create database pg-ipc;' -U postgres
+- psql -c 'create database pgipc;' -U postgres
 deploy:
   provider: npm
   email: github@tixz.dk

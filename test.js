@@ -1,6 +1,6 @@
 var test = require('tape')
 
-var connectionString = 'postgres://postgres:@localhost:5432/pg-ipc'
+var connectionString = 'postgres://postgres:@localhost:5432/pgipc'
 var pg = require('pg')
 var ipc = require('.')
 var afterAll = require('after-all')

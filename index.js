@@ -69,7 +69,7 @@ function PgIPC (client) {
   function _dispatchUnlisten (channel) {
     client.query(`UNLISTEN ${client.escapeIdentifier(channel)}`, function (err) {
       if (err) return that.emit('error', err)
-      this.emit('unlisten', channel)
+      that.emit('unlisten', channel)
     })
   }
 }

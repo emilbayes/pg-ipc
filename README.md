@@ -7,6 +7,7 @@
 ```js
 var pgIPC = require('pg-ipc')
 var client = new require('pg').Client({ ... })
+client.connect()
 
 var ipc = pgIPC(client)
 
